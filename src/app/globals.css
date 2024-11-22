@@ -2,20 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply bg-gradient-to-r from-amber-500 to-black ;
+    
+  
+  
+  body {
+    /* Default Gradient */
+    background: linear-gradient(45deg, #000000, #9e2a2f); /* Black to Reddish */
+  
+    /* For larger screens, you can adjust the gradient or colors */
+    @media (min-width: 640px) { /* sm */
+      background: linear-gradient(45deg, #000000, #9e2a2f);
+    }
+    @media (min-width: 768px) { /* md */
+      background: linear-gradient(45deg, #111, #9e2a2f);
+    }
+    @media (min-width: 1024px) { /* lg */
+      background: linear-gradient(45deg, #222, #9e2a2f);
+    }
+    @media (min-width: 1280px) { /* xl */
+      background: linear-gradient(45deg, #000, #9e2a2f);
+    }
+  }
+  .tags{
+    background-color: deepskyblue;
+    margin-right: 0.5rem;
+    margin-top: o.5rem;
+    padding: 3px 10px;
+    display: inline-block;
+    color: black;
+    font-size: 12px;
+    
+  }
+  .tags:last-child{
+    margin: 0;
+  }
+  .tags:nth-child(1){
+    background-color: rgb(253, 121, 187);
+  }
+  .tags:nth-child(2){
+    background-color: rgb(201, 166, 28);
+  }
+  .tags:nth-child(3){
+    background-color: rgb(94, 233, 186);
+  }
 }
