@@ -3,48 +3,59 @@
 @tailwind utilities;
 
 body {
-    @apply bg-gradient-to-r from-amber-500 to-black ;
-    
+  @apply bg-gradient-to-r from-amber-500 to-black; /* Tailwind utility */
   
-  
+  /* Default Gradient */
+  background: linear-gradient(45deg, #f59e0b, #000); /* Black to Reddish */
+}
+
+@media (min-width: 640px) { /* sm */
   body {
-    /* Default Gradient */
-    background: linear-gradient(45deg, #000000, #9e2a2f); /* Black to Reddish */
-  
-    /* For larger screens, you can adjust the gradient or colors */
-    @media (min-width: 640px) { /* sm */
-      background: linear-gradient(45deg, #000000, #9e2a2f);
-    }
-    @media (min-width: 768px) { /* md */
-      background: linear-gradient(45deg, #111, #9e2a2f);
-    }
-    @media (min-width: 1024px) { /* lg */
-      background: linear-gradient(45deg, #222, #9e2a2f);
-    }
-    @media (min-width: 1280px) { /* xl */
-      background: linear-gradient(45deg, #000, #9e2a2f);
-    }
+    background: linear-gradient(45deg, #f59e0b, #000); /* Fixed gradient syntax */
   }
-  .tags{
-    background-color: deepskyblue;
-    margin-right: 0.5rem;
-    margin-top: o.5rem;
-    padding: 3px 10px;
-    display: inline-block;
-    color: black;
-    font-size: 12px;
-    
+}
+
+@media (min-width: 768px) { /* md */
+  body {
+    background: linear-gradient(45deg, #f59e0b, #000);
   }
-  .tags:last-child{
-    margin: 0;
+}
+
+@media (min-width: 1024px) { /* lg */
+  body {
+    background: linear-gradient(45deg, #f59e0b, #000);
   }
-  .tags:nth-child(1){
-    background-color: rgb(253, 121, 187);
+}
+
+@media (min-width: 1280px) { /* xl */
+  body {
+    background: linear-gradient(45deg, #f59e0b, #000);
   }
-  .tags:nth-child(2){
-    background-color: rgb(201, 166, 28);
-  }
-  .tags:nth-child(3){
-    background-color: rgb(94, 233, 186);
-  }
+}
+
+/* Tags Styling */
+.tags {
+  background-color: deepskyblue;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem; /* Fixed typo here */
+  padding: 3px 10px;
+  display: inline-block;
+  color: black;
+  font-size: 12px;
+}
+
+.tags:last-child {
+  margin: 0;
+}
+
+.tags:nth-child(1) {
+  background-color: rgb(253, 121, 187);
+}
+
+.tags:nth-child(2) {
+  background-color: rgb(201, 166, 28);
+}
+
+.tags:nth-child(3) {
+  background-color: rgb(94, 233, 186);
 }
